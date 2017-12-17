@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   post "/users" => "users#create"
 
-  get "/users/:id" => "users#show", as "user"
+  get "/users/:id" => "users#show", as: "user"
   
 
 end
