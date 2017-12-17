@@ -1,5 +1,11 @@
 class SessionsController < ApplicationController
 
+
+
+	def new 
+
+	end 
+
 	def login(user)
 
 		session[:user_id] = user.id 
@@ -17,6 +23,15 @@ class SessionsController < ApplicationController
 	def logout 
 
 		@current_user = session[:user_id] = nil 
+
+	end 
+
+
+	def destroy 
+
+		logout
+
+		redirect_to "/login"
 
 	end 
 

@@ -21,9 +21,19 @@ class UsersController < ApplicationController
 
 	def create 
 
-		user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password] )
+		user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email] 
 
-		redirect_to users_path
+		if user &&user.authenticate ( params[:password] )
+
+			login(user)
+
+			redirect_to "/login"
+
+			redirect_to User_path(user)
+
+		end 
+
+
 
 	end 
 
