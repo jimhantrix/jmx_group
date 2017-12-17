@@ -6,11 +6,11 @@ Rails.application.routes.draw do
 
   get "'users" => "users#index", as: "users"
 
-  # get "/signup" => "users#new", as: "new_user"
+  get "/signup" => "users#new", as: "new_user"
 
-  # post "/users" => "users#create"
+  post "/users" => "users#create"
 
-  # get "/users/:id" => "users#show", as "user"
+  get "/users/:id" => "users#show", as "user"
   
 
 end

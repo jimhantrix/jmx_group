@@ -7,20 +7,20 @@ class UsersController < ApplicationController
 	end 
 
 
-	# def new 
+	def new 
 
-	# 	render :new 
+		render :new 
 
-	# end 
+	end 
 
 
 
-	# def create 
+	def create 
 
-	# 	user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password] )
+		user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password] )
 
-	# 	redirect_to users_path
+		redirect_to users_path
 
-	# end 
+	end 
 end
 
