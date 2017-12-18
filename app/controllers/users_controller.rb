@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
 		user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email] 
 
-		if user &&user.authenticate ( params[:password] )
+		if user && user.authenticate ( params[:password] )
 
 			login(user)
 
@@ -33,8 +33,7 @@ class UsersController < ApplicationController
 
 		end 
 
-
-
+		
 	end 
 
 
