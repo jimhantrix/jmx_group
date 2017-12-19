@@ -6,34 +6,34 @@ class SessionsController < ApplicationController
 
 	end 
 
-	def login(user)
 
-		session[:user_id] = user.id 
-		@current_user = user 
+	def create 
+
+		user = User.find_by (email: params[:email])
+
+		if user && user.authenticate(params[:password])
+
+			session[:user_id] = user.id
+			
+			flash[:success] = "Good to join Us"
+
+			redirect_to user_path(user)
+
+		else
+
+			flash[:warning] = "Invalid email / password"
+
+			redirect_to "/login"
+
+		end 
+
 
 	end 
-
-
-	def current-user 
-
-		@current_user || User.find(session[:user_id])
-
-	end 
-
-	def logout 
-
-		@current_user = session[:user_id] = nil 
-
-	end 
-
 
 	def destroy 
 
-		logout
-
-		redirect_to "/login"
+		logout 
 
 	end 
 
-	
 end

@@ -2,45 +2,52 @@ class UsersController < ApplicationController
 
 
 
-	
-
-	def index 
-
-		@Users = User.all
-
-	end 
-
-
 	def new 
 
-		render :new 
 
 	end 
+
+
 
 
 
 	def create 
 
-		user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email] 
+		user = User.create(
 
-		if user && user.authenticate ( params[:password] )
+			first_name: params[:first_name],
 
-			login(user)
+			last_name: params[:last_name],
 
-			redirect_to "/login"
+			email: params[:email], 
 
-			redirect_to User_path(user)
+			password: params[:password]
+			
+		)
 
+		if user.save 
+
+			session[:user_id] = user.id 
+
+			flash[:sucess] = "Glad you Joined Us!"
+
+			redirect_to user_path(user)
+
+			else 
+
+			  flash[:warning] = "Invalid email or password!"
+
+			  redirect_to "/signup"
+			end
 		end 
+	
+	
 
-		
-	end 
 
 
-	def show 
 
-		@user = User.find(params[:id])
+end 
 
-	end 
-end
+
+
 
