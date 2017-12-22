@@ -14,5 +14,6 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require angular
+//= require angular-animate 
 //=require app
 //= require_tree .
