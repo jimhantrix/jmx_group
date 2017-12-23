@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  rental: MyString
+  sleeps: 
+  duration: MyString
+  house_rules: MyString
+
+two:
+  location: MyString
+  rental: MyString
+  sleeps: 
+  duration: MyString
+  house_rules: MyString
