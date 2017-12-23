@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   
   get "/logout" => "sessions#destroy"
 
+  get "/houses" => "houses#index"
+
   
 
 end
