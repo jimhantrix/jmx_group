@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   get "/houses" => "houses#index"
 
+  get "/houses" => "houses#new", as: "new_house"
+
   
 
 end

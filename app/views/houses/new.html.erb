@@ -1,0 +1,41 @@
+< % form_tag "/houses", method: :post do % >
+
+
+	<div>
+
+	< %= text_field_tag :location, nil placeholder: "Location" % > 
+
+	</div>
+
+
+
+	<div>
+		
+		< % = text_field_tag :rental, nil placeholder: "Rental"
+
+	</div>
+
+
+
+	<div>
+		
+		< % = number_field_tag :sleeps, nil placeholder: "Sleeps"
+
+	</div>
+
+	
+	<div>
+		
+		< % = text_field_tag :duration, nil placeholder: "Duration"
+
+	</div>
+
+	<div>
+		
+		< % = text_field_tag :house_rules, nil placeholder: "Duration"
+
+	</div>
+
+< % = submit_tag "Add House" % >
+
+< % end % > 

@@ -5,4 +5,12 @@ class HousesController < ApplicationController
 		@houses = Houses.all
 
 	end 
+
+	def new 
+
+		render :new 
+
+	end 
+
+	
 end
