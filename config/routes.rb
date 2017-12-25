@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get "/houses" => "houses#new", as: "new_house"
 
+  post "/houses" => "houses#create"
+
   
 
 end
