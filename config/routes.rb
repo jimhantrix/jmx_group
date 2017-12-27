@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get "/users/:user_id/houses" => "house_users#index", as: "user_houses"
 
+  get "/users/:user_id/houses" => "houses_users#index", as: "house_users"
+
   
 
 end
