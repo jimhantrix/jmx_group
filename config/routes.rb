@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
   post "/houses" => "houses#create"
 
+  get "/users/:user_id/houses" => "house_users#index", as: "user_houses"
+
   
 
 end
