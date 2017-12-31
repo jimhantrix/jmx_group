@@ -1,15 +1,15 @@
 
 
 
-< % @houses.each do | house | % >
+<%=@houses.each do | house | %>
 
 <div>
-	<h3> < % = house.location % > </h3>
+	<h3> <%=house.location%> </h3>
 
-	<% if @current_user %>
-	< % = button_to "Join House" % >
-	<% end %>
+	<% if @current_user%>
+	<%=button_to "Join House"%>
+	<%end%>
 </div>
 <br>
 
-< % end % > 
+<%end%> 
