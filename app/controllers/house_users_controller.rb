@@ -5,8 +5,6 @@ class HouseUsersController < ApplicationController
 		@houses = House.all
 
 		current_user 
-
-
 	end 
 
 
@@ -17,6 +15,5 @@ class HouseUsersController < ApplicationController
 		@user.houses.push(@house)
 
 		redirect_to user_libraries(@user)
-
 	end 
 end
